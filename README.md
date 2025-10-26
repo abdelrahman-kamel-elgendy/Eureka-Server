@@ -5,11 +5,11 @@ A Spring Cloud Netflix Eureka-based service registry server for microservices ar
 This service acts as a central registry in a microservices architecture, allowing services to register themselves and discover other available services in the ecosystem.
 
 ## Features
-- Service Registration & registery: Central registry for microservices
-- Health Monitoring: Custom health endpoints and Spring Boot Actuator integration
-- Security: HTTP Basic authentication for Eureka dashboard
-- Multiple Environments: Support for development, docker, and production profiles
-- Docker Support: Containerization ready with Dockerfile and docker-compose
+- Service Registration & registery: Central registry for microservices.
+- Health Monitoring: Custom health endpoints and Spring Boot Actuator integration.
+- Security: HTTP Basic authentication for Eureka dashboard.
+- Multiple Environments: Support for development, docker, and production profiles.
+- Docker Support: Containerization ready with Dockerfile and docker-compose.
 
 ## Project Structure
 ```
@@ -39,6 +39,6 @@ Eureka-Server/
 
 ## Security
 The service is secured with HTTP Basic Authentication:
-- Eureka dashboard and API endpoints require authentication
-- Health and info endpoints are publicly accessible
-- Uses BCrypt password encoding
+- Eureka dashboard and API endpoints require authentication.
+- Health and info endpoints are publicly accessible.
+- Uses BCrypt password encoding.
