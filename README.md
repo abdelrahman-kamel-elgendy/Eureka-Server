@@ -1,11 +1,11 @@
-# Service Discovery Server
-A Spring Cloud Netflix Eureka-based service discovery server for microservices architecture. This service acts as the central registry for all microservices in the e-commerce platform.
+# Eureka Server
+A Spring Cloud Netflix Eureka-based service registry server for microservices architecture. This service acts as the central registry for all microservices in the e-commerce platform.
 
 ## Project Overview
 This service acts as a central registry in a microservices architecture, allowing services to register themselves and discover other available services in the ecosystem.
 
 ## Features
-- Service Registration & Discovery: Central registry for microservices
+- Service Registration & registery: Central registry for microservices
 - Health Monitoring: Custom health endpoints and Spring Boot Actuator integration
 - Security: HTTP Basic authentication for Eureka dashboard
 - Multiple Environments: Support for development, docker, and production profiles
@@ -13,17 +13,17 @@ This service acts as a central registry in a microservices architecture, allowin
 
 ## Project Structure
 ```
-Service-Discovery/
-├── src/main/java/com/e_commerce/service_discovery/
-│   ├── ServicesDiscoveryApplication.java     ## Main application class
+Eureka-Server/
+├── src/main/java/com/e_commerce/eureka_server/
+│   ├── EurekaServer.java                       # Main application class
 │   ├── config/
-│   │   └── SecurityConfig.java               ## Security configuration
+│   │   └── SecurityConfig.java                 # Security configuration
 │   └── controller/
-│       └── HealthController.java             ## Health check endpoint
+│       └── HealthController.java               # Health check endpoint
 ├── src/main/resources/
-│   ├── .env.example                              ## Environment variables template
-│   └── application.properties                ## Application configuration
-└── pom.xml                                  ## Maven dependencies
+│   ├── .env.example                            # Environment variables template
+│   └── application.properties                  # Application configuration
+└── pom.xml                                     # Maven dependencies
 ```
 
 ## API Endpoints
