@@ -35,9 +35,21 @@ public class SecurityConfig {
         http
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(authz -> authz
-                        .requestMatchers("/api/health/**").permitAll()
-                        .requestMatchers("/actuator/health/**").permitAll()
-                        .requestMatchers("/actuator/info").permitAll()
+                        // Public endpoints
+                        .requestMatchers(
+                                "/api/health/**",
+                                "/actuator/health/**",
+                                "/actuator/info",
+
+                                // Swagger endpoints
+                                "/swagger-ui/**",
+                                "/swagger-ui.html",
+                                "/v3/api-docs/**",
+                                "/webjars/**",
+                                "/swagger-resources/**",
+                                "/configuration/**")
+                        .permitAll()
+                        // Secure endpoints
                         .anyRequest().authenticated())
                 .httpBasic(Customizer.withDefaults())
                 .formLogin(form -> form.disable());
