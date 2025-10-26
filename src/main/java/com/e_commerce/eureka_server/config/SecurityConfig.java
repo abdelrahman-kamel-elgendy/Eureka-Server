@@ -18,16 +18,16 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableWebSecurity
 public class SecurityConfig {
 
-    @Value("${EUREKA_USERNAME}")
+    @Value("${app.security.admin.username:eureka-admin}")
     private String adminUsername;
 
-    @Value("${EUREKA_PASSWORD}")
+    @Value("${app.security.admin.password:admin123}")
     private String adminPassword;
 
-    @Value("${SPRING_SECURITY_USER_NAME}")
+    @Value("${app.security.client.username:eureka-client}")
     private String clientUsername;
 
-    @Value("${SPRING_SECURITY_USER_PASSWORD}")
+    @Value("${app.security.client.password:client123}")
     private String clientPassword;
 
     @Bean
