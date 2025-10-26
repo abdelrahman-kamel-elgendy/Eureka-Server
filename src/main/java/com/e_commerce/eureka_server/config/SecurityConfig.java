@@ -1,4 +1,4 @@
-package com.e_commerce.service_discovery.config;
+package com.e_commerce.eureka_server.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

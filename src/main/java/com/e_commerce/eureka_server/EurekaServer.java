@@ -1,4 +1,4 @@
-package com.e_commerce.service_discovery;
+package com.e_commerce.eureka_server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,9 +6,9 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 @SpringBootApplication
 @EnableEurekaServer
-public class ServicesDiscoveryApplication {
+public class EurekaServer {
 	public static void main(String[] args) {
-		SpringApplication.run(ServicesDiscoveryApplication.class, args);
+		SpringApplication.run(EurekaServer.class, args);
 	}
 
 }

@@ -1,4 +1,4 @@
-package com.e_commerce.service_discovery.controller;
+package com.e_commerce.eureka_server.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
