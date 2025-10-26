@@ -6,7 +6,7 @@ This service acts as a central registry in a microservices architecture, allowin
 
 ## Features
 - Service Registration & registery: Central registry for microservices.
-- Health Monitoring: Custom health endpoints and Spring Boot Actuator integration.
+- Health Monitoring: Spring Boot Actuator integration.
 - Security: HTTP Basic authentication for Eureka dashboard.
 - Multiple Environments: Support for development, docker, and production profiles.
 - Docker Support: Containerization ready with Dockerfile and docker-compose.
@@ -16,10 +16,8 @@ This service acts as a central registry in a microservices architecture, allowin
 Eureka-Server/
 ├── src/main/java/com/e_commerce/eureka_server/
 │   ├── EurekaServer.java                       # Main application class
-│   ├── config/
-│   │   └── SecurityConfig.java                 # Security configuration
-│   └── controller/
-│       └── HealthController.java               # Health check endpoint
+│   └── config/
+│       └── SecurityConfig.java                 # Security configuration
 ├── src/main/resources/
 │   ├── .env.example                            # Environment variables template
 │   └── application.properties                  # Application configuration
@@ -31,7 +29,6 @@ Eureka-Server/
 |Endpoint	     |Method	|Description	            |Authentication|
 |----------------|----------|---------------------------|--------------|
 |/	             |GET	    |Eureka Dashboard	        |Required      |
-|/api/health     |GET	    |Application health status	|Public        |
 |/actuator/health|GET	    |Spring Boot Actuator health|Public        |
 |/actuator/info	 |GET	    |Application information	|Public        |
 |/eureka/**	     |Various	|Eureka server endpoints	|Required      |
